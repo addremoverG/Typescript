@@ -1,0 +1,52 @@
+img {
+    width: 100%;
+    object-fit: cover; /* или cover */
+}
+
+.header_logo {
+    height: 200px;
+    overflow: hidden;
+  }
+
+
+.map_and_contact_info {
+    display: flex;
+    width: 100%;
+    height: 300px;
+    background-color: rgb(157, 255, 127);
+}
+
+.map {
+    width: 30%;
+    background-color: rgb(6, 129, 43);
+    box-sizing: border-box;
+    display: flex;               
+    align-items: center;         
+    justify-content: center;  
+
+}
+
+iframe{
+    height: 100%;
+
+}
+.contact_info{
+    width: 70%;
+
+    background-color: rgb(61, 134, 83);
+
+}
+
+.menu ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .menu li {
+    padding: 10px 15px;
+    font-weight: bold;
+  }
+

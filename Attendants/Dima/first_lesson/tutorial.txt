@@ -1,0 +1,22 @@
+1. Create package.json file: npm init -y
+2. npm i -D typescript ts-node @types/node @tsconfig/node22
+	- typescript - package that allows compilation from typescript to JS
+	- ts-node allow tunning code without compilation to TS, not allowed in the production enviroment.
+	- @types/node - manual implementation of the type`s support
+3. Creating ts.config file: code ./tsconfig.json
+	- here we can change the JS versions is used
+4. Configurating eslint: npm init @eslint/config
+	What do you want to lint? · javascript
+	✔ How would you like to use ESLint? · problems
+	✔ What type of modules does your project use? · esm
+	✔ Which framework does your project use? · none
+	✔ Does your project use TypeScript? · Yes
+	✔ Where does your code run? · node
+	✔ Which language do you want your configuration file be written in? · ts
+	✔ Would you like to add Jiti as a devDependency? · No
+	✔ Would you like to install them now? · Yes
+	✔ Which package manager do you want to use? · npm
+5. Configurating eslint.config.mts file
+6. npm i -D eslint-plugin-prettier eslint-config-prettier
+7. npx ts-node ./src/index.ts
+8. npm i express @types/express
