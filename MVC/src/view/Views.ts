@@ -1,40 +1,6 @@
-import express from 'express';
-import { Routes } from './routes/Routes';
-
-(async (): Promise<void> => {
-  const server = express();
-  const port = Number(process.env.PORT) || 3000;
-
-  new Routes(server);
-  // const routes = new Routes(server);
-  // routes.defaultPage();
-  // routes.credPage();
-
-  server.listen(port, () => {
-    console.log(`[Log] Server listening under port: ${port}`);
-  });
-})().catch((err) => {
-  console.log(err instanceof Error ? err.message : err);
-  // process.exit(1);
-});
-
-/*
-  const addition = (a: number, b: number): number => {
-    return a + b;
-  };
-
-  const number1: number = 5;
-  const number2: number = 10;
-  const result: number = addition(number1, number2);
-
-  console.log(`The application name is "${process.env.APP_NAME}"`);
-
-  console.log('The result is %d', result);
-*/
-
-/*
-server.get('/', (req, res) => {
-    res.send(`
+export class Views {
+  static getMainPage() {
+    return `
       <!doctype html>
       <html lang="en">
       <head>
@@ -52,20 +18,24 @@ server.get('/', (req, res) => {
               <input type="submit" value="Submit">
             </form>
           </div>
+          <div class="test">
+            <h1>Data Page</h1>
+            
+            <a href="http://localhost:3000/data">Redirect</a>
+          </div>
       </body>
       </html>
-    `);
-  });
+    `;
+  }
 
-  server.get('/cred', (req, res) => {
-    const { fname, lname } = req.query;
-    res.send(`
+  static getCredPage(fname: string, lname: string) {
+    return `
       <!doctype html>
       <html lang="en">
       <head>
           <meta charset="utf-8">   
           <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-          <title>Second page</title>
+          <title>Cred page</title>
           <style>
             #test {text-align: center;}
             h1 {text-decoration: underline; text-decoration-color: red;}
@@ -86,7 +56,36 @@ server.get('/', (req, res) => {
           </div>
       </body>
       </html>
-    `);
-  });
+    `;
+  }
 
-*/
+  static getDataPage(data: (number | string)[][]) {
+    return `
+      <!doctype html>
+      <html lang="en">
+      <head>
+          <meta charset="utf-8">   
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+          <title>Data page</title>
+          <style>
+            .test {text-align: center;}
+          </style>
+      </head>
+      <body>
+        <br />
+        <div class="test">
+        <ul>
+            ${data.map((inner) => `<li>${inner.toString()}</li>`)}
+        </ul>
+        </div>
+        <br />
+        <div class="test">
+          <form action="http://localhost:3000" method="get">
+            <input type="submit" value="Return">
+          </form>
+        </div>
+      </body>
+      </html>
+    `;
+  }
+}
