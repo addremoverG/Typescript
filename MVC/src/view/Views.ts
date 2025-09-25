@@ -7,7 +7,7 @@ export class Views {
           <meta charset="utf-8">    
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
           <title>ExpressJS TypeScript starter template</title>
-          <style> .test {text-align: center;}</style>
+          <link href="styles.css" rel="stylesheet" type="text/css">
       </head>
       <body>
           <div class="test">  
@@ -20,7 +20,6 @@ export class Views {
           </div>
           <div class="test">
             <h1>Data Page</h1>
-            
             <a href="http://localhost:3000/data">Redirect</a>
           </div>
       </body>
@@ -36,11 +35,7 @@ export class Views {
           <meta charset="utf-8">   
           <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
           <title>Cred page</title>
-          <style>
-            #test {text-align: center;}
-            h1 {text-decoration: underline; text-decoration-color: red;}
-            .test {text-align: center;}
-          </style>
+          <link href="styles.css" rel="stylesheet" type="text/css">
       </head>
       <body>
           <div id="test">  
@@ -67,16 +62,22 @@ export class Views {
           <meta charset="utf-8">   
           <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
           <title>Data page</title>
-          <style>
-            .test {text-align: center;}
-          </style>
+          <link href="styles.css" rel="stylesheet" type="text/css">
       </head>
       <body>
         <br />
         <div class="test">
-        <ul>
-            ${data.map((inner) => `<li>${inner.toString()}</li>`)}
-        </ul>
+          <table>
+            <th>
+              H1 | H2
+            </th>
+            ${data
+              .map(
+                (inner) =>
+                  `<tr><td>${inner.toString().replace(',', ' | ')}</td></tr>`,
+              )
+              .join()}
+          </table>
         </div>
         <br />
         <div class="test">

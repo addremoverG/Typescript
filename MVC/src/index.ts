@@ -5,7 +5,7 @@ import { Routes } from './routes/Routes';
   const server = express();
   const port = Number(process.env.PORT) || 3000;
 
-  new Routes(server);
+  new Routes(server, __dirname);
   // const routes = new Routes(server);
   // routes.defaultPage();
   // routes.credPage();
