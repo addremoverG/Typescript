@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+
+}
+div  {
+    margin: 10px 0px;
+}
+
+.border {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.flex-gap {
+    gap: var(--gap);   
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.flex-spacebetween { 
+    justify-content: space-between;
+}
+
+.flex-center { 
+    justify-content: center;
+}
+
+.bg-color {
+    background-color: #f9edce;
+}
+
+#menu {
+    padding: 0px 15px;
+}
+
+#footer {
+    padding: 0px 15px;
+}
+
+/* #map {
+    flex: 4;
+}
+
+#contact {
+    flex: 6;
+} */
