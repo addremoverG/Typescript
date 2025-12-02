@@ -1,12 +1,13 @@
-import express from "express";
+import express, { Express } from "express";
 import path from "path";
+// import { Express } from "express";
 
 (async (): Promise<void> => {
-  const app = express();
+  const app: Express = express();
   const port = 3000;
 
   app.use(express.static(path.join(__dirname, "public")));
-  app.get("/", (reg, res) => {
+  app.get("/", (req, res) => {
     const filePath = "public/index.html";
     res.sendFile(filePath, { root: __dirname });
   });
