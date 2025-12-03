@@ -1,4 +1,4 @@
-import { dummyData } from '../model/DummyDB';
+import { PG } from '../model/Pg';
 import { Views } from '../view/Views';
 import { Request, Response } from 'express';
 
@@ -17,8 +17,9 @@ export class PageController {
   }
 
   static getDataPage() {
-    return (req: Request, res: Response) => {
-      const data = dummyData;
+    return async (req: Request, res: Response) => {
+      // const data = dummyData;
+      const data = await PG.getInstance().queryDB();
       res.send(Views.getDataPage(data));
     };
   }

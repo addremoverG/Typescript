@@ -139,7 +139,3 @@ dist
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 .vite/
-
-# pg volume folder
-pgdata
-./docker/pgdata

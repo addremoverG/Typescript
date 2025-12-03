@@ -54,7 +54,7 @@ export class Views {
     `;
   }
 
-  static getDataPage(data: (number | string)[][]) {
+  static getDataPage(data: Record<string, string>[]) {
     return `
       <!doctype html>
       <html lang="en">
@@ -68,15 +68,8 @@ export class Views {
         <br />
         <div class="test">
           <table>
-            <th>
-              H1 | H2
-            </th>
-            ${data
-              .map(
-                (inner) =>
-                  `<tr><td>${inner.toString().replace(',', ' | ')}</td></tr>`,
-              )
-              .join()}
+            <th>H1</th><th>H2</th>
+            ${data.map((inner) => `<tr><td>${inner.create_time}</td><td>${inner.name}</td></tr>`).join()}
           </table>
         </div>
         <br />
