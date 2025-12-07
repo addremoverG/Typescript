@@ -1,0 +1,93 @@
+img {
+    width: 40%;
+    height: 40%;
+}
+
+.header_logo {
+    height: 30%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.menu_bar {
+    background-color: #c9b12b;
+    width:min-content;
+}
+
+.menu ul {
+    display: flex; 
+    list-style-type: none; 
+    padding: 0;
+    margin: 0; 
+    justify-content: center;
+}
+  
+.menu li {
+    padding: 20px 20px; 
+    font-weight: bold;
+    white-space: nowrap; 
+    cursor: pointer;
+    transition: background-color 0.6s;
+}
+
+.menu li:hover {
+    background-color: #c9b12b;
+}
+
+.find_us {
+    display: flex; 
+    width: 30%; 
+    margin: 20px auto; 
+    height: auto;
+    border: 3px solid #000000;
+}
+
+.map {
+    width: 100%;
+    display: flex;               
+    align-items: center;         
+    justify-content: center;  
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.map img {
+    max-height: 100%;
+    max-width: 100%;
+    width: auto; 
+}
+
+.footer {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+}
+
+.licznik_gosci{
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 130px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
