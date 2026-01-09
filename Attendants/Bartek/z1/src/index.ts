@@ -1,5 +1,4 @@
 import express, { Express } from 'express';
-import path from 'path';
 import { Routes } from './routes/Routes';
 
 (async (): Promise<void> => {
