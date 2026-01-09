@@ -1,6 +1,6 @@
 export class Views {
-  static getMainPage() {
-    return `
+	static getMainPage() {
+		return `
 			<!DOCTYPE html>
 			<html lang="en">
 
@@ -48,5 +48,33 @@ export class Views {
 
 			</html>
 		`;
-  }
+	}
+	static getDataPage(data: Record<string, string>[]) {
+		return `
+      <!doctype html>
+      <html lang="en">
+      <head>
+          <meta charset="utf-8">   
+          <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+          <title>Data page</title>
+          <link href="styles.css" rel="stylesheet" type="text/css">
+      </head>
+      <body>
+        <br />
+        <div class="test">
+          <table>
+            <th>H1</th><th>H2</th>
+            ${data.map((inner) => `<tr><td>${inner.create_time}</td><td>${inner.name}</td></tr>`).join()}
+          </table>
+        </div>
+        <br />
+        <div class="test">
+          <form action="http://localhost:3000" method="get">
+            <input type="submit" value="Return">
+          </form>
+        </div>
+      </body>
+      </html>
+    `;
+	}
 }

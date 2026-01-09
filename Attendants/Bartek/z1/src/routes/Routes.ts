@@ -7,6 +7,7 @@ export class Routes {
     private readonly dir: string,
   ) {
     this.server.use(express.static(`${this.dir}/public`));
-    this.server.get(`/`, PageController.getMainPage())
+    this.server.get(`/`, PageController.getMainPage());
+    this.server.get(`/data`, PageController.getDataPage());
   }
 }
