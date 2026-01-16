@@ -1,0 +1,53 @@
+export class MainView {
+  static getPage(): string {
+    return `
+    <!DOCTYPE html>
+			<html lang="en">
+
+			<head>
+					<meta charset="UTF-8">
+					<meta name="viewport" content="width=device-width, initial-scale=1.0">
+					<link rel="stylesheet" href="styles.css">
+					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
+					<title>Main Page</title>
+			</head>
+
+			<body>
+					<div class="flex flex-col">
+							<div class="flex flex-center" id="logo"><img src="images/download.png" width="350px"></div>
+							<div id="menu" class="flex flex-row border border flex-gap bg-color" style="--gap: 30px;">
+									<div>Kontakt</div>
+									<div>Mapka</div>
+									<div>Historia firmy</div>
+									<div>Zarząd firmy</div>
+									<div>Piszą o nas</div>
+									<div>Oferta</div>
+									<div>Certyfikat</div>
+									<div>Prezentacja firmy</div>
+									<div><a href="http://localhost:3000/api/data">getApiData</a></div>
+							</div>
+							<div class="flex flex-row flex-gap" style="--gap: 10px;">
+									<div id="map">
+											<iframe
+													src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d76605.23211588655!2d17.955982427065106!3d53.12969825915387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47031386764ebd6f%3A0xe49ee48c4b65f30e!2sBydgoszcz!5e0!3m2!1spl!2spl!4v1768566729507!5m2!1spl!2spl"
+													width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+													referrerpolicy="no-referrer-when-downgrade"></iframe>
+									</div>
+									<div id="contact">
+											<p>ul Stary Rynek 1</p>
+											<p>85-100 Bydgoszcz</p>
+											<p>Tel: <a href="tel:600600600">600600600</a></p>
+
+									</div>
+							</div>
+							<div id="footer" class="flex flex-row flex-gap flex-spacebetween border bg-color" style="--gap: 10px">
+									<div id="admin">Kontakt do administratora strony: <a href="mailto:papaj@vatican.vn">admin</a></div>
+									<div id="guests">Gości: ++ </div>
+							</div>
+					</div>
+			</body>
+
+			</html>
+    `;
+  }
+}
