@@ -29,7 +29,7 @@ export class PG {
 
   async queryDB() {
     return await this.client.many(
-      'SELECT * FROM table_name ORDER BY create_time DESC',
+      'SELECT * FROM menu ORDER BY id',
     );
   }
 }
