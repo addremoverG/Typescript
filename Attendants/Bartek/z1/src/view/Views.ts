@@ -63,8 +63,8 @@ export class Views {
         <br />
         <div class="test">
           <table>
-            <th>H1</th><th>H2</th>
-            ${data.map((inner) => `<tr><td>${inner.create_time}</td><td>${inner.name}</td></tr>`).join()}
+            <th>Lp</th><th>Produkt</th><th>Cena</th>
+            ${data.map((inner) => `<tr><td>${inner.id}</td><td>${inner.name}</td><td>${inner.price} zł</td></tr>`).join()}
           </table>
         </div>
         <br />
