@@ -22,7 +22,7 @@ export default defineConfig([
   {
     rules: {
       "@typescript-eslint/no-unused-vars": "warn",
-      "prettier/prettier": ['error', {singleQuote:true}]
+      "prettier/prettier": ['error', {singleQuote:false}]
     },
   },
 ]);

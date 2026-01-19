@@ -1,6 +1,6 @@
-import { Model } from '../model/Model';
-import { Views } from '../view/MainPage';
-import { Request, Response } from 'express';
+import { Model } from "../model/Model";
+import { Views } from "../view/MainPage";
+import { Request, Response } from "express";
 
 export class PageController {
   static getMainPage() {
@@ -16,6 +16,15 @@ export class PageController {
       } else {
         res.send(Views.failedValidationPage());
       }
+    };
+  }
+
+  static test() {
+    return (req: Request, res: Response) => {
+      const query = req.query;
+      const body = req.body;
+      console.log('Query', query);
+      console.log('Body', body);
     };
   }
 }

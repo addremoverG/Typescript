@@ -1,5 +1,5 @@
-import express, { Express } from 'express';
-import { Routes } from './router/Routes';
+import express, { Express } from "express";
+import { Routes } from "./router/Routes";
 
 (async (): Promise<void> => {
   const server: Express = express();

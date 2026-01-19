@@ -6,6 +6,7 @@ import { Router } from "./routes/Router";
   const PORT = 3000;
 
   new Router(server, __dirname);
+  
   server.listen(PORT, (): void => {
     console.log(`Server is running at http://localhost:${PORT}`);
   });

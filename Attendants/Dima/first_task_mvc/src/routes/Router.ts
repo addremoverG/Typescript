@@ -6,11 +6,12 @@ export class Router {
     private readonly server: Express,
     private readonly dir: string
   ) {
-    this.server.use(express.json()); // Middleware to parse JSON bodies
-    this.server.use(express.urlencoded({ extended: true })); // Middleware to parse URL-encoded bodies
-    this.server.use(express.static(`${this.dir}/public/styles`));
-    // console.log(this.dir);
-    this.server.use(express.static(`${this.dir}/public/images`));
+    this.server.use(
+      express.json(),
+      express.urlencoded({ extended: true }),
+      express.static(`${this.dir}/public/styles`),
+      express.static(`${this.dir}/public/images`)
+    );
     this.server.get("/", PageController.getMainPage());
     this.server.get("/contacts", PageController.getContactPage());
     this.server.get("/map", PageController.getMapPage());

@@ -1,4 +1,4 @@
-import data from './dummyDB.json';
+import data from "./dummyDB.json";
 
 interface User {
   firstName: string;
