@@ -6,7 +6,10 @@ import { PageController } from './controller/PageController';
   const server = http.createServer((request, response) => {
     const url = new URL(request.url ?? '', `http://${request.headers.host}`)
     const mapper = {
-      '/api/data': () => { PageController.getApiData(response) }
+      '/api/data': () => { PageController.getApiData(response) },
+      '/': () => { PageController.mainPage(response) },
+      '/styles.css': () => { PageController.getCss(response) },
+      '/images/logo.png': () => { PageController.getCss(response) }
     }
 
     if (!Object.keys(mapper).includes(url.pathname)) {

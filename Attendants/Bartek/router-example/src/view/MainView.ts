@@ -1,4 +1,4 @@
-export class Views {
+export class MainView {
 	static getMainPage() {
 		return `
 			<!DOCTYPE html>
@@ -7,14 +7,14 @@ export class Views {
 			<head>
 					<meta charset="UTF-8">
 					<meta name="viewport" content="width=device-width, initial-scale=1.0">
-					<link rel="stylesheet" href="styles.css">
+					<link rel="stylesheet" href="/styles.css">
 					<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter">
 					<title>Kremówki papieskie</title>
 			</head>
 
 			<body>
 					<div class="flex flex-col">
-							<div class="flex flex-center" id="logo"><img src="images/logo.png" width="350px"></div>
+							<div class="flex flex-center" id="logo"><img src="/images/logo.png" width="350px"></div>
 							<div id="menu" class="flex flex-row border border flex-gap bg-color" style="--gap: 30px;">
 									<div>Kontakt</div>
 									<div>Mapka</div>
@@ -48,33 +48,5 @@ export class Views {
 
 			</html>
 		`;
-	}
-	static getDataPage(data: Record<string, string>[]) {
-		return `
-      <!doctype html>
-      <html lang="en">
-      <head>
-          <meta charset="utf-8">   
-          <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-          <title>Data page</title>
-          <link href="styles.css" rel="stylesheet" type="text/css">
-      </head>
-      <body>
-        <br />
-        <div class="test">
-          <table>
-            <th>Lp</th><th>Produkt</th><th>Cena</th>
-            ${data.map((inner) => `<tr><td>${inner.id}</td><td>${inner.name}</td><td>${inner.price} zł</td></tr>`).join()}
-          </table>
-        </div>
-        <br />
-        <div class="test">
-          <form action="http://localhost:3000" method="get">
-            <input type="submit" value="Return">
-          </form>
-        </div>
-      </body>
-      </html>
-    `;
 	}
 }
