@@ -1,11 +1,10 @@
 {
   "name": "mvc_z1",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch -r ts-node/register --env-file=.env ./src/public/index/index.ts",
+    "dev": "node --watch -r ts-node/register --env-file=.env ./src/public/index.ts localhost 3000",
     "lint": "eslint src/**/*.ts --fix"
   },
   "keywords": [],
@@ -14,7 +13,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",
-    "@types/node": "^25.0.9",
+    "@types/node": "^25.0.10",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
     "ts-node": "^10.9.2",
@@ -23,5 +22,6 @@
   "dependencies": {
     "@types/express": "^5.0.6",
     "express": "^5.2.1"
-  }
+  },
+  "description": ""
 }
