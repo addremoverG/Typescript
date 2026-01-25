@@ -1,0 +1,19 @@
+export const historyContent = () => {
+  return `<main>
+            <div>
+                <div>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin at justo sed neque lacinia interdum. Vivamus eget tempor nunc. Quisque euismod fringilla iaculis. Morbi tempus justo posuere neque gravida ullamcorper vitae nec est. Fusce a ipsum eget lacus vehicula sollicitudin et vitae velit. Cras eleifend arcu eu nibh aliquet rhoncus. Mauris a elementum sapien, ut interdum velit. Morbi ultricies sapien a erat rhoncus bibendum. Curabitur quis est nec magna dignissim feugiat aliquet at nulla. Maecenas hendrerit quam vitae ipsum molestie, quis posuere metus mollis. Morbi ut risus nec sapien eleifend rutrum. Curabitur et tortor id elit posuere ornare sed et lacus. Aenean maximus id quam at efficitur. Nulla aliquam metus tristique sem eleifend, fringilla lobortis ex tempor.
+
+                        Nam ultrices odio orci, in laoreet turpis euismod ac. Vivamus arcu tellus, blandit id ultrices et, tempor ut enim. Nulla tempus lacus id libero scelerisque posuere non et ligula. Quisque sit amet ex non mi finibus dictum sit amet in purus. Duis tincidunt dui justo, sit amet tristique ligula pretium eget. Ut porttitor at enim vitae venenatis. Fusce lacinia dictum cursus. Sed egestas odio malesuada enim convallis interdum. Aenean accumsan justo in ex dapibus lobortis. Phasellus imperdiet purus vel enim fermentum tincidunt. Donec laoreet, purus non finibus bibendum, arcu ex vulputate erat, volutpat pharetra metus dui eget dui.
+
+                        Pellentesque tellus magna, pulvinar in laoreet non, ultricies nec lectus. Vivamus viverra hendrerit efficitur. Sed consequat elit ut tellus efficitur efficitur. Praesent luctus velit at dictum consectetur. Integer non lorem quam. Nunc sit amet urna ipsum. Vestibulum varius consectetur gravida. Ut lacus nibh, maximus eu rutrum in, egestas non diam. Sed finibus magna et posuere tempor.
+
+                        Vestibulum pulvinar nisl ex, ac faucibus odio varius in. Donec ultrices neque ut accumsan dictum. Fusce ultricies a massa vitae dictum. Suspendisse potenti. Nam erat dui, efficitur in vulputate sed, mollis nec nibh. Integer vitae congue ex. Curabitur egestas venenatis tincidunt. Nunc luctus, urna et imperdiet luctus, nisl lorem dictum ligula, tempor molestie mauris libero vitae risus. Nullam dapibus, augue non rutrum dictum, augue est fringilla metus, id pharetra sem sem ut tortor. Quisque sit amet neque et elit suscipit vulputate non vitae arcu. In id nisi maximus, maximus justo nec, volutpat dolor. Sed lobortis fringilla nulla, eu venenatis erat iaculis sit amet. Pellentesque vel vehicula elit. Nunc semper auctor leo, vitae ultricies lacus dictum sed.
+
+                        Curabitur feugiat dolor ut turpis laoreet, eu viverra augue consequat. Etiam placerat, purus at egestas suscipit, nisl lorem sodales purus, ut molestie mi purus a velit. Integer tincidunt, lorem sed scelerisque dapibus, magna turpis luctus tortor, sit amet facilisis urna arcu id enim. Maecenas ac arcu porta, lacinia diam consectetur, aliquam velit. Suspendisse sed urna scelerisque, aliquam mauris eu, iaculis dui. Maecenas malesuada ante non pharetra placerat. Vivamus ligula erat, sollicitudin non risus vitae, porta pretium neque. Fusce elementum ullamcorper dui in malesuada. Integer ut auctor justo, congue blandit ligula. Donec congue egestas lobortis. Cras sed mauris ut tellus molestie iaculis a eget felis. Nullam dignissim pellentesque pulvinar. Aliquam sit amet mauris aliquam, aliquet ligula id, consectetur nisl. Aenean vel tellus enim. Etiam commodo lorem ac augue dignissim tristique vitae consectetur quam. Quisque ullamcorper ligula sed libero dignissim pellentesque.
+                    </p>
+                </div>
+            </div>
+            </main>`;
+};
