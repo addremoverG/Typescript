@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 import { ContactsPageView } from '../view/pages/contactsPage';
 import { MapPageView } from '../view/pages/mapPage';
-import { MainPageView } from '../view/pages/MainPage';
+import { MainPageView } from '../view/pages/mainPage';
 import { CompanyHistoryPageView } from '../view/pages/companyHistoryPage';
 import { ManagementPageView } from '../view/pages/managementPage';
 import { AboutPageView } from '../view/pages/aboutPage';
