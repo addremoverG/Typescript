@@ -1,20 +1,16 @@
 import express, { Express } from 'express';
-import { Routes } from './routes/Routes';
+import { routing } from './routes/Routes';
+import { setupStaticAssets } from './middleware/static-assets.middleware';
 
 (async (): Promise<void> => {
-  const app: Express = express();
+  const server: Express = express();
   const port = Number(process.env.PORT) || 3000;
 
-  new Routes(app, __dirname);
+  setupStaticAssets(server);
+  routing(server);
 
-  // app.use(express.static(path.join(__dirname, 'public')));
-  // app.get('/', (req, res) => {
-  //   const filePath = 'public/index.html';
-  //   res.sendFile(filePath, { root: __dirname });
-  // });
-
-  app.listen(port, () => {
-    console.log(`Port: ${port}`);
+  server.listen(port, () => {
+    console.log(`Port number: ${port}`);
   });
 })().catch((err) => {
   console.log(err instanceof Error ? err.message : err);
