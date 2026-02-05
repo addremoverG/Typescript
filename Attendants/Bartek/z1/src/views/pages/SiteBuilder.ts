@@ -1,6 +1,6 @@
 import { SiteTemplate } from './SiteTemplate';
 import { View } from '../../interface';
-import { mainPage } from '../layouts';
+import { mainPage, stylesPage } from '../layouts';
 
 export class SiteBuilder extends SiteTemplate implements View {
   constructor(title: string) {
@@ -14,7 +14,7 @@ export class SiteBuilder extends SiteTemplate implements View {
       <body>
       <div class="flex flex-col">
       ${this.header}
-      ${!flag ? mainPage() : '<p>Test</p>'}
+      ${!flag ? mainPage() : stylesPage()}
       ${this.footer}
       </div>
       </body>
