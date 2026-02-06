@@ -3,6 +3,7 @@ body {
     justify-content: center;
     /* align-items: center; */
     font-family: "Inter", sans-serif;
+    background-color: white;
 
 }
 div  {
@@ -61,11 +62,11 @@ div  {
 
 .styles {
     padding: 30px 15px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 25px;
-    border-color: red;
-    background-color: #e79090;
+    /* border-style: solid; */
+    /* border-width: 1px; */
+    /* border-radius: 25px; */
+    /* border-color: red; */
+    /* background-color: #e79090; */
 }
 
 .blue-yellow span {
