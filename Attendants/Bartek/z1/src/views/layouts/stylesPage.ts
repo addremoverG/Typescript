@@ -7,7 +7,6 @@ export const stylesPage = () => {
                     <input type="color" id="background" name="background" value="#ffffff" />
                     <label for="background">Wybierz kolor</label>
                 </div>
-                <button type="submit">Zmień tło</button>
             </form>
         </div>
         <script src="post.js" defer></script>
