@@ -10,13 +10,15 @@ export class SiteBuilder extends SiteTemplate implements View {
   generateView(flag?: string): string {
     return `
     <html lang='en'>
-      ${this.head}
-      <body>
+    <script src="script.js" type="module" defer></script>
+    ${this.head}
+    <body>
       <div class="flex flex-col">
       ${this.header}
       ${!flag ? mainPage() : stylesPage()}
       ${this.footer}
       </div>
+      
       </body>
     </html>
     `;
