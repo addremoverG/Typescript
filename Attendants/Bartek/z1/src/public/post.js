@@ -2,18 +2,14 @@ const colorForm = document.getElementById('colorForm');
 const colorPicker = document.getElementById('background');
 
 async function getCurrentBgColor() {
-  try {
-    const response = await fetch('/bg-settings');
-    const data = await response.json();
-    if (data.color) {
-      colorPicker.value = data.color;
-    }
-  } catch (err) {
-    console.error('Failed to load initial color:', err);
+  const response = await fetch('/bg-settings');
+  const data = await response.json();
+  if (data.color) {
+    colorPicker.value = data.color;
   }
 }
 
-colorForm.addEventListener('submit', async (e) => {
+colorForm.addEventListener('change', async (e) => {
   e.preventDefault();
 
   const color = colorPicker.value;
