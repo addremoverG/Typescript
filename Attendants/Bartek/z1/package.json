@@ -17,6 +17,7 @@
   "devDependencies": {
     "@eslint/js": "^9.34.0",
     "@tsconfig/node22": "^22.0.2",
+    "@types/express-session": "^1.18.2",
     "@types/node": "^24.3.1",
     "eslint": "^9.34.0",
     "eslint-config-prettier": "^10.1.8",
@@ -30,6 +31,7 @@
   "dependencies": {
     "@types/express": "^5.0.3",
     "express": "^5.1.0",
+    "express-session": "^1.19.0",
     "pg-promise": "^12.3.0"
   }
 }

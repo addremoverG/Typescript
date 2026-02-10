@@ -1,8 +1,9 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     font-family: "Inter", sans-serif;
+    background-color: white;
 
 }
 div  {
@@ -58,3 +59,32 @@ div  {
 #contact {
     flex: 6;
 } */
+
+.styles {
+    padding: 30px 15px;
+    /* border-style: solid; */
+    /* border-width: 1px; */
+    /* border-radius: 25px; */
+    /* border-color: red; */
+    /* background-color: #e79090; */
+}
+
+.blue-yellow span {
+    color: blue;
+    background-color: yellow;
+}
+
+.black-gray span {
+    color: black;
+    background-color: gray;
+}
+
+.white-blue span {
+    color: white;
+    background-color: blue;
+}
+
+li {
+    margin-bottom: 5px;
+    text-decoration: underline;
+}
