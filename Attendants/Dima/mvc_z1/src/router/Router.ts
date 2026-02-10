@@ -10,8 +10,8 @@ export class Router {
     this.server.use(
       express.json(),
       express.urlencoded({ extended: true }),
-      express.static(`${this.dir}/styles`),
-      express.static(`${this.dir}/images`),
+      express.static(`${this.dir}/public/styles`),
+      express.static(`${this.dir}/public/images`),
     );
 
     Object.keys(pageRoutes).forEach((route) => {

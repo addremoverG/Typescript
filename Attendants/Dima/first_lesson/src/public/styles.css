@@ -8,7 +8,6 @@ img {
     overflow: hidden;
   }
 
-
 .map_and_contact_info {
     display: flex;
     width: 100%;
@@ -23,7 +22,6 @@ img {
     display: flex;               
     align-items: center;         
     justify-content: center;  
-
 }
 
 iframe{
@@ -32,8 +30,7 @@ iframe{
 }
 .contact_info{
     width: 70%;
-
-    background-color: rgb(61, 134, 83);
+    /* background-color: rgb(61, 134, 83); */
 
 }
 

@@ -1,4 +1,4 @@
-import { HOST, PORT } from '../../public';
+import { HOST, PORT } from '../../';
 
 export const generalBody = (innerHtml: string) => {
   return `<body>
