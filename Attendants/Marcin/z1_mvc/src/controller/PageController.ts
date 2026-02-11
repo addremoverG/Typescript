@@ -33,6 +33,12 @@ export class PageController {
     };
   }
 
+  static getStylePage() {
+    return (req: Request, res: Response) => {
+      res.send(Views.getStylePage());
+    };
+  }
+
   // static getCredPage() {
   //   return (req: Request, res: Response) => {
   //     const { fname, lname } = req.query;
