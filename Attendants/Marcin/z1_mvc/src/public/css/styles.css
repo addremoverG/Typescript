@@ -20,11 +20,15 @@ body {
     font-size: 16px;
     transition: background-color 0.3s; /* Smooth transition on hover */
     text-align: center;
-    background: light grey;
+    /* background: light grey; */
+    background-color: var(--bg-color, #000000);
+    
 }
 
 .content {
     padding: 20px;
+    text-align: center;
+    /* background-color: #000000; */
 }
 
 .footer {
@@ -32,4 +36,5 @@ body {
     font-size: 16px;
     transition: background-color 0.3s; /* Smooth transition on hover */
     text-align: center;
+    /* background-color: #000000; */
 }

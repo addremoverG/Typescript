@@ -15,5 +15,6 @@ export class Routes {
     this.server.get(`/map`, PageController.getMapPage());
     this.server.get(`/portfolio`, PageController.getPortfolioPage());
     this.server.get(`/contact`, PageController.getContactPage());
+    this.server.get(`/style`, PageController.getStylePage());
   }
 }
