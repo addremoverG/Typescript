@@ -18,6 +18,7 @@ export const generalBody = (innerHtml: string) => {
                     <li><a href="http://${HOST}:${PORT}/products">Products</a></li>
                     <li><a href="http://${HOST}:${PORT}/certificate">Certificate</a></li>
                     <li><a href="http://${HOST}:${PORT}/company_presentation">Company presentation</a></li>
+                    <li><a href="http://${HOST}:${PORT}/css">CSS Page</a></li>
                 </ul>
             </nav>
         </div>

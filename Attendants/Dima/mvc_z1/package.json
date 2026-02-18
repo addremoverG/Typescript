@@ -13,6 +13,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@tsconfig/node22": "^22.0.5",
+    "@types/express-session": "^1.18.2",
     "@types/node": "^25.0.10",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
@@ -21,7 +22,8 @@
   },
   "dependencies": {
     "@types/express": "^5.0.6",
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "express-session": "^1.19.0"
   },
   "description": ""
 }

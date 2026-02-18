@@ -1,7 +1,10 @@
 import { generateHTML } from './components/htmlBuilder';
 
 export abstract class View {
-  static renderPage(this: any): string {
+  abstract title: string;
+  abstract innerBody: string;
+
+  renderPage(): string {
     return generateHTML(this.title, this.innerBody);
   }
 }
