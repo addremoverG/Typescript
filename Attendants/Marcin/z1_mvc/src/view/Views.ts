@@ -8,6 +8,12 @@ export class Views {
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
               <title>${title}</title>
               <link href="/styles.css" rel="stylesheet" type="text/css">
+              <script>
+                const savedColor = sessionStorage.getItem('bgColor');
+                if (savedColor) {
+                  document.documentElement.style.setProperty('--bg-color', savedColor);
+                }
+              </script>
           </head>
           <body>
             <div class="image-container">
@@ -21,6 +27,7 @@ export class Views {
               <a href="/map">Map</a>
               <a href="/portfolio">Portfolio</a>
               <a href="/contact">Contact</a>
+              <a href="/style">Style</a>
             </div>
 
             <!-- Content Section -->
@@ -59,7 +66,7 @@ export class Views {
   static getMapPage(): string {
     return this.pageTemplate('Map Page', `
       <div id="map" class="content">
-        <h2>Our Services</h2>
+        <h2>Map</h2>
         <iframe
           width="600"
           height="450"
@@ -92,6 +99,35 @@ export class Views {
         <p>Telefon: <a href="tel:+48 792 871 631">+48 792 xxx xxx</a></p>
         <p>Adres: Wawel, Kraków 30-001</p>
       </div>
+    `)
+  }
+
+  static getStylePage(): string {
+    return this.pageTemplate('Style Page', `
+      <div id="style" class="content">
+        <h2>Choose your style!</h2>
+        <p><a href="javascript:void(0)" onclick="tempMenuColor('white')">White menu</a></p>
+        <p><a href="javascript:void(0)" onclick="tempMenuColor('red')">Red menu</a></p>
+        <p><a href="javascript:void(0)" onclick="permMenuColor('black')">Black menu FOREVER!</a></p>
+        <p><a href="javascript:void(0)" onclick="permMenuColor('white')">White menu FOREVER!</a></p>
+      </div>
+
+      <script>
+        const menuDiv = document.querySelector('.menu');
+
+        // Function to change menu background color temporarily
+        function tempMenuColor(color) {
+          menuDiv.style.backgroundColor = color;
+        }
+
+        // Function to change menu background color for the duration of session
+        function permMenuColor(color) {
+          menuDiv.style.backgroundColor = color;
+          sessionStorage.setItem('bgColor', color);
+          // document.documentElement.style.setProperty('--bg-color', color);
+          
+        }
+      </script>
     `)
   }
 }
