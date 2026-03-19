@@ -1,5 +1,4 @@
 export const head = (title: string) => {
-  console.log(`${__dirname}`);
   return `<!DOCTYPE html>
 <html lang="en">
 <head>

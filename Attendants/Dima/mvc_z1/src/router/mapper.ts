@@ -13,6 +13,7 @@ export const pageRoutes: Record<string, PageHandler> = {
   '/products': PageController.getProductsPage,
   '/certificate': PageController.getCertificatePage,
   '/company_presentation': PageController.getCompanyPresentationPage,
+  '/css': PageController.getCssPage,
 };
 
 export function resolvePageController(endpoint: string) {

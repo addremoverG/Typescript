@@ -9,7 +9,7 @@ import { PageController } from './controller/PageController';
       '/api/data': () => { PageController.getApiData(response) },
       '/': () => { PageController.mainPage(response) },
       '/styles.css': () => { PageController.getCss(response) },
-      '/images/logo.png': () => { PageController.getCss(response) }
+      '/images/logo.png': () => { PageController.getImage(response) }
     }
 
     if (!Object.keys(mapper).includes(url.pathname)) {

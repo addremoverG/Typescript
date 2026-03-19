@@ -35,7 +35,7 @@ export class PageController {
   }
   static getCss(res: ServerResponse): void {
     try {
-      const data: Buffer = readFileSync('../../public/styles.css');
+      const data: Buffer = readFileSync('./src/public/styles.css');
 
       res.writeHead(200, { 'Content-Type': 'text/css' });
       res.end(data);
@@ -56,7 +56,7 @@ export class PageController {
   static getImage(res: ServerResponse): void {
     try {
       // Read as raw binary Buffer
-      const img = readFileSync('../../public/images/logo.png');
+      const img = readFileSync('./src/public/images/logo.png');
 
       res.writeHead(200, { 'Content-Type': 'image/jpeg' });
       // Buffers can be sent directly via res.end()
