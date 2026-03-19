@@ -1,0 +1,15 @@
+export const login = () => {
+  return `<main>
+            <div>
+              <form action="/submit-data" method="POST">
+                <label for="name">Imię:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <input type="submit" value="Wyślij">
+              </form>
+            </div>
+          </main>`;
+};
