@@ -5,8 +5,10 @@ export class CssPageView extends View {
 
   innerBody: string = `
     <div class="css_page">
-      <h3>Press here:</h3>
-      <button type="button" id="myButton">Click Me!</button><br><br>
+      <label for="navColor">Choose bar color:</label>
+      <input type="color" id="navColor"/>
+      <button type="button" id="applyNavColor">Apply</button>
     </div>
+    <script scr="/index.js"></script>
   `;
 }

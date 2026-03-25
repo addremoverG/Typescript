@@ -3,7 +3,7 @@ import { Request, Response } from 'express';
 
 type PageHandler = () => (req: Request, res: Response) => void;
 
-export const pageRoutes: Record<string, PageHandler> = {
+export const pageGetRoutes: Record<string, PageHandler> = {
   '/': PageController.getMainPage,
   '/contacts': PageController.getContactPage,
   '/map': PageController.getMapPage,
@@ -16,8 +16,8 @@ export const pageRoutes: Record<string, PageHandler> = {
   '/css': PageController.getCssPage,
 };
 
-export function resolvePageController(endpoint: string) {
-  const handler = pageRoutes[endpoint];
+export function resolveGetPageController(endpoint: string) {
+  const handler = pageGetRoutes[endpoint];
 
   if (!handler) {
     throw new Error(`No controller found for endpoint: ${endpoint}`);
