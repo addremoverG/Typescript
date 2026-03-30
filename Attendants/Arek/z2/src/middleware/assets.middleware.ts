@@ -2,6 +2,7 @@ import { join } from 'path';
 import { Express } from 'express';
 import express from 'express';
 import session from 'express-session';
+import { injectSessionData } from './sessionData';
 
 export function setupMiddleware(server: Express) {
   server.use(
@@ -17,5 +18,6 @@ export function setupMiddleware(server: Express) {
         maxAge: 60 * 60 * 1000, // COOKIE LIFETIME (np. 1 godzina)
       },
     }),
+    injectSessionData,
   );
 }
