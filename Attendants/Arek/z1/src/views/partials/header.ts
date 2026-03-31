@@ -2,6 +2,7 @@ export const header = () => {
   return `<header>
             <div id="logo"><a href="http://localhost:3000/"><img src="images/download.png" width="50%"></a></div>
             <div id="menu">
+                <div class="menu"><a href="http://localhost:3000/login">Login</a></div>
                 <div class="menu">Kontakt</div>
                 <div class="menu">Mapka</div>
                 <div class="menu"><a href="http://localhost:3000/historia_firmy">Historia firmy</a></div>
