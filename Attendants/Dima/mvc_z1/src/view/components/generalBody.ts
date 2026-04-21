@@ -1,12 +1,15 @@
 import { HOST, PORT } from '../../';
 
-export const generalBody = (innerHtml: string) => {
+export const generalBody = (
+  innerHtml: string,
+  navColor: string = '#90ee90',
+) => {
   return `<body>
         <div class="flex-container">
         <div class="header_logo">
             <img src="/header.jpg" alt="Header">
         </div>
-        <div class="navigation_bar">
+        <div class="navigation_bar" style="background-color: ${navColor};">
             <nav class="menu">
                 <ul>
                     <li><a href="http://${HOST}:${PORT}/" method="get">Home</a></li>
