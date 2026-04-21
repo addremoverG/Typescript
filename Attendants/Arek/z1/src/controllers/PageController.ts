@@ -10,4 +10,8 @@ export class PageController {
     return (req: Request, res: Response) =>
       res.send(new SiteBuilder('History').generateView('history'));
   }
+  static login() {
+    return (req: Request, res: Response) =>
+      res.send(new SiteBuilder('Login').generateView(''));
+  }
 }

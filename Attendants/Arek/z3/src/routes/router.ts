@@ -24,6 +24,7 @@ export function routing(server: Express) {
   server.get('/', PageController.mainPage); // all
   server.get('/historia_firmy', PageController.companyHistory); // all
   server.get('/css', PageController.css); // all
+  server.get('/kontakt', PageController.kontakt); // all
 
   server.get('/login', PageController.login);
   // server.get('/logout', (req, res) => {

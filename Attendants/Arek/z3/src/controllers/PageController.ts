@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { SiteBuilder } from '../views/pages/SiteBuilder';
 import { successHtml } from '../views/layouts/successTemplate';
+import { PG } from '../models/Pg';
 
 // declare module 'express-session' {
 //   interface SessionData {
@@ -70,5 +71,17 @@ export class PageController {
     const { name, email } = req.body;
     req.session.authorise = name;
     res.send(successHtml(name));
+  }
+
+  static async kontakt(req: Request, res: Response) {
+    // const data = dummyData;
+    const { savedColor, authorise } = res.locals;
+    const data = await PG.getInstance().queryDB();
+    res.send(
+      new SiteBuilder('Kontakt', savedColor, authorise).generateView(
+        'kontakt',
+        data,
+      ),
+    );
   }
 }
