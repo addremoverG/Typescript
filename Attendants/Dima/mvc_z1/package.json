@@ -23,7 +23,8 @@
   "dependencies": {
     "@types/express": "^5.0.6",
     "express": "^5.2.1",
-    "express-session": "^1.19.0"
+    "express-session": "^1.19.0",
+    "pg-promise": "^12.6.2"
   },
   "description": ""
 }
