@@ -1,2 +1,1 @@
-docker compose --env-file .env -f
-docker/postgres-cimpose.yml up -d
+docker compose --env-file .env -f postgres-compose.yml up -d

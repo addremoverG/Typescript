@@ -1,4 +1,4 @@
-import { generateHTML } from './components/htmlBuilder';
+import { generateHTML } from "./components/htmlBuilder";
 
 export abstract class View {
   abstract title: string;
