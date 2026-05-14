@@ -1,11 +1,9 @@
 import { View } from "../abstractView";
-import { generateHTML } from "../components/htmlBuilder";
 
 export class DBPageView extends View {
   title: string = "DB interaction";
-  innerBody: string = "";
 
-  renderPage(locals?: Record<string, any>): string {
+  getBody(locals?: Record<string, any>): string {
     const users: { id: number; name: string; email: string }[] =
       locals?.users ?? [];
     const rows = users
@@ -17,7 +15,7 @@ export class DBPageView extends View {
       )
       .join("");
 
-    const innerBody = `
+    return `
   <div class="db_page">
     <h1>Here the DB data:</h1>
     <table>
@@ -29,7 +27,5 @@ export class DBPageView extends View {
       ${rows}
     </table>
   </div>`;
-
-    return generateHTML(this.title, innerBody, locals);
   }
 }
