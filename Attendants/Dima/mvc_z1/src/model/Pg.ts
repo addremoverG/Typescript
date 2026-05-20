@@ -1,21 +1,20 @@
-import pgPromise, { IDatabase } from "pg-promise";
+import pgPromise, { IDatabase } from 'pg-promise';
+import { HOST } from '..';
 
 export class DB {
   private static instance: DB;
-  private readonly db: IDatabase<{}>;
+  readonly connection: IDatabase<{}>;
 
   private constructor() {
     const pgp = pgPromise({
-      connect(e) {
-        console.log(`Connected: ${e.client.database}`);
-      },
+      connect(e) {},
       error(err, e) {
-        console.error("DB Error:", err, e.query);
+        console.error('DB Error:', err, e.query);
       },
     });
 
-    this.db = pgp({
-      host: "localhost",
+    this.connection = pgp({
+      host: HOST,
       port: Number(process.env.POSTGRES_PORT),
       database: process.env.POSTGRES_DB,
       user: process.env.POSTGRES_USER,
@@ -29,9 +28,5 @@ export class DB {
       DB.instance = new DB();
     }
     return DB.instance;
-  }
-
-  public getAllUsers() {
-    return this.db.manyOrNone("SELECT * FROM test_table");
   }
 }

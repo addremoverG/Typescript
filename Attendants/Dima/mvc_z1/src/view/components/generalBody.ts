@@ -1,8 +1,8 @@
-import { HOST, PORT } from "../../";
+import { HOST, PORT } from '../../';
 
 export const generalBody = (
   innerHtml: string,
-  navColor: string = "#90ee90",
+  navColor: string = '#90ee90',
 ) => {
   return `<body>
         <div class="flex-container">
@@ -18,11 +18,11 @@ export const generalBody = (
                     <li><a href="http://${HOST}:${PORT}/company_history">Company history</a></li>
                     <li><a href="http://${HOST}:${PORT}/management">Management</a></li>
                     <li><a href="http://${HOST}:${PORT}/about">About us</a></li>
-                    <li><a href="http://${HOST}:${PORT}/products">Products</a></li>
+                    <li><a href="http://${HOST}:${PORT}/dbdata/products/all">Products</a></li>
                     <li><a href="http://${HOST}:${PORT}/certificate">Certificate</a></li>
                     <li><a href="http://${HOST}:${PORT}/company_presentation">Company presentation</a></li>
                     <li><a href="http://${HOST}:${PORT}/css">CSS Page</a></li>
-                    <li><a href="http://${HOST}:${PORT}/dbdata">DB data</a></li>
+                    <li><a href="http://${HOST}:${PORT}/dbdata/users/all">DB data</a></li>
                 </ul>
             </nav>
         </div>

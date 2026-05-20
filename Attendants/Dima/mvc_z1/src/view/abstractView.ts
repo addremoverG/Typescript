@@ -1,10 +1,10 @@
-import { generateHTML } from "./components/htmlBuilder";
+import { generateHTML } from './components/htmlBuilder';
 
 export abstract class View {
   abstract title: string;
-  abstract innerBody: string;
+  abstract getBody(locals?: Record<string, any>): string;
 
   renderPage(locals?: Record<string, any>): string {
-    return generateHTML(this.title, this.innerBody, locals);
+    return generateHTML(this.title, this.getBody(locals), locals);
   }
 }

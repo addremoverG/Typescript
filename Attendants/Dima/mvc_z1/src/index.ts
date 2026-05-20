@@ -1,5 +1,6 @@
 import express, { Express } from 'express';
 import { Router } from './router/Router';
+import './router/getRoutesMapper';
 
 export const [HOST, PORT] =
   process.argv[2] === 'localhost'

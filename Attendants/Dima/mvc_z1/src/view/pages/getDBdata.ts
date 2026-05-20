@@ -1,35 +1,32 @@
-import { View } from "../abstractView";
-import { generateHTML } from "../components/htmlBuilder";
+import { View } from '../abstractView';
 
 export class DBPageView extends View {
-  title: string = "DB interaction";
-  innerBody: string = "";
-
-  renderPage(locals?: Record<string, any>): string {
-    const users: { id: number; name: string; email: string }[] =
+  title: string = 'DB interaction';
+  getBody(locals?: Record<string, any>): string {
+    const users: { id: number; name: string; surname: string }[] =
       locals?.users ?? [];
     const rows = users
       .map(
         (user) => `
     <tr>
-      <td>${user.id}</td><td>${user.name}</td><td>${user.email}</td>
+      <td>${user.id}</a></td>
+      <td>${user.name}</td>
+      <td>${user.surname}</td>
     </tr>`,
       )
-      .join("");
+      .join('');
 
-    const innerBody = `
-  <div class="db_page">
-    <h1>Here the DB data:</h1>
+    return `
+    <div class="db_page">
+    <h1>Here are the DB data:</h1>
     <table>
       <tr>
         <th>ID</th>
         <th>Name</th>
-        <th>Email</th>
+        <th>Surname</th>
       </tr>
       ${rows}
     </table>
   </div>`;
-
-    return generateHTML(this.title, innerBody, locals);
   }
 }

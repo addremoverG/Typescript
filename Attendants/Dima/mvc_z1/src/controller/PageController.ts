@@ -1,18 +1,16 @@
-import { Request, Response } from "express";
-import { ContactsPageView } from "../view/pages/contactsPage";
-import { MapPageView } from "../view/pages/mapPage";
-import { MainPageView } from "../view/pages/mainPage";
-import { CompanyHistoryPageView } from "../view/pages/companyHistoryPage";
-import { ManagementPageView } from "../view/pages/managementPage";
-import { AboutPageView } from "../view/pages/aboutPage";
-import { ProductsPageView } from "../view/pages/productsPage";
-import { CertificatePageView } from "../view/pages/certificatePage";
-import { CompanyPresentationPageView } from "../view/pages/CompanyPresentation";
-import { CssPageView } from "../view/pages/cssPage";
-import { DBPageView } from "../view/pages/getDBdata";
-import { DB } from "../model/Pg";
+import { Request, Response } from 'express';
+import { ContactsPageView } from '../view/pages/contactsPage';
+import { MapPageView } from '../view/pages/mapPage';
+import { MainPageView } from '../view/pages/mainPage';
+import { CompanyHistoryPageView } from '../view/pages/companyHistoryPage';
+import { ManagementPageView } from '../view/pages/managementPage';
+import { AboutPageView } from '../view/pages/aboutPage';
+import { ProductsPageView } from '../view/pages/productsPage';
+import { CertificatePageView } from '../view/pages/certificatePage';
+import { CompanyPresentationPageView } from '../view/pages/CompanyPresentation';
+import { CssPageView } from '../view/pages/cssPage';
 
-declare module "express-session" {
+declare module 'express-session' {
   interface SessionData {
     color: string;
   }
@@ -76,13 +74,6 @@ export class PageController {
   static getCssPage() {
     return (req: Request, res: Response) => {
       res.send(new CssPageView().renderPage(res.locals));
-    };
-  }
-
-  static getDBDataPage() {
-    return async (req: Request, res: Response) => {
-      const users = await DB.getInstance().getAllUsers();
-      res.send(new DBPageView().renderPage({ ...res.locals, users }));
     };
   }
 }
