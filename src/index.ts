@@ -1,6 +1,7 @@
 import express, { Express } from 'express';
 import { Router } from './router/Router';
 import './router/getRoutesMapper';
+import path from 'path/win32';
 
 export const [HOST, PORT] =
   process.argv[2] === 'localhost'
@@ -10,7 +11,7 @@ export const [HOST, PORT] =
 (async (): Promise<void> => {
   const server: Express = express();
 
-  new Router(server, __dirname);
+  new Router(server, path.join(__dirname, '..'));
 
   server.listen(PORT, (): void => {
     console.log(`Server is run on : http://${HOST}:${PORT}`);
