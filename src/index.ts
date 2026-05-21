@@ -7,7 +7,7 @@ import path from 'path';
 export const [HOST, PORT] =
   process.argv[2] === 'localhost'
     ? ['localhost', Number(process.argv[3])]
-    : ['test', 3000];
+    : [process.env.RAILWAY_PUBLIC_DOMAIN, 3000];
 
 (async (): Promise<void> => {
   const server: Express = express();
