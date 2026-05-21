@@ -1,5 +1,4 @@
 import pgPromise, { IDatabase } from 'pg-promise';
-import { HOST } from '..';
 
 export class DB {
   private static instance: DB;

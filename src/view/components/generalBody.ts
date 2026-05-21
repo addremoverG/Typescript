@@ -1,5 +1,3 @@
-import { HOST, PORT } from '../../';
-
 export const generalBody = (
   innerHtml: string,
   navColor: string = '#90ee90',
