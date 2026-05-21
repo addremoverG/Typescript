@@ -14,6 +14,7 @@ export class Router {
     private server: Express,
     private dir: string,
   ) {
+    console.log('DIR in Router:', this.dir);
     setupMiddleware(this.server, this.dir);
 
     getRegistry.getPaths().forEach((route) => {
