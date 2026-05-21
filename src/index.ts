@@ -1,7 +1,8 @@
 import express, { Express } from 'express';
 import { Router } from './router/Router';
 import './router/getRoutesMapper';
-import path from 'path/win32';
+import './router/postRoutesMapper';
+import path from 'path';
 
 export const [HOST, PORT] =
   process.argv[2] === 'localhost'
