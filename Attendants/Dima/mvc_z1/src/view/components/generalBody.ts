@@ -1,5 +1,3 @@
-import { HOST, PORT } from '../../';
-
 export const generalBody = (
   innerHtml: string,
   navColor: string = '#90ee90',
@@ -12,17 +10,17 @@ export const generalBody = (
         <div class="navigation_bar" style="background-color: ${navColor};">
             <nav class="menu">
                 <ul>
-                    <li><a href="http://${HOST}:${PORT}/" method="get">Home</a></li>
-                    <li><a href="http://${HOST}:${PORT}/contacts" method="get">Contact</a></li>
-                    <li><a href="http://${HOST}:${PORT}/map">Map</a></li>
-                    <li><a href="http://${HOST}:${PORT}/company_history">Company history</a></li>
-                    <li><a href="http://${HOST}:${PORT}/management">Management</a></li>
-                    <li><a href="http://${HOST}:${PORT}/about">About us</a></li>
-                    <li><a href="http://${HOST}:${PORT}/dbdata/products/all">Products</a></li>
-                    <li><a href="http://${HOST}:${PORT}/certificate">Certificate</a></li>
-                    <li><a href="http://${HOST}:${PORT}/company_presentation">Company presentation</a></li>
-                    <li><a href="http://${HOST}:${PORT}/css">CSS Page</a></li>
-                    <li><a href="http://${HOST}:${PORT}/dbdata/users/all">DB data</a></li>
+                    <li><a href="/" method="get">Home</a></li>
+                    <li><a href="/contacts" method="get">Contact</a></li>
+                    <li><a href="/map">Map</a></li>
+                    <li><a href="/company_history">Company history</a></li>
+                    <li><a href="/management">Management</a></li>
+                    <li><a href="/about">About us</a></li>
+                    <li><a href="/dbdata/products/all">Products</a></li>
+                    <li><a href="/certificate">Certificate</a></li>
+                    <li><a href="/company_presentation">Company presentation</a></li>
+                    <li><a href="/css">CSS Page</a></li>
+                    <li><a href="/dbdata/users/all">DB data</a></li>
                 </ul>
             </nav>
         </div>

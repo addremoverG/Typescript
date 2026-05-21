@@ -1,5 +1,4 @@
 import pgPromise, { IDatabase } from 'pg-promise';
-import { HOST } from '..';
 
 export class DB {
   private static instance: DB;
@@ -13,14 +12,21 @@ export class DB {
       },
     });
 
-    this.connection = pgp({
-      host: HOST,
-      port: Number(process.env.POSTGRES_PORT),
-      database: process.env.POSTGRES_DB,
-      user: process.env.POSTGRES_USER,
-      password: process.env.POSTGRES_PASSWORD,
-      max: 10,
-    });
+    this.connection = pgp(
+      process.env.DATABASE_URL
+        ? {
+            connectionString: process.env.DATABASE_URL,
+            max: 10,
+          }
+        : {
+            host: process.env.POSTGRES_HOST,
+            port: Number(process.env.POSTGRES_PORT),
+            database: process.env.POSTGRES_DB,
+            user: process.env.POSTGRES_USER,
+            password: process.env.POSTGRES_PASSWORD,
+            max: 10,
+          },
+    );
   }
 
   public static getInstance(): DB {

@@ -1,9 +1,6 @@
-import express, { Express } from 'express';
-import session from 'express-session';
-import { colorMiddleware } from '../middleware/colorMiddleware';
-import { CssController } from '../controller/CssController';
-import { getRegistry } from './getRouteRegistry';
+import { Express } from 'express';
 import { setupMiddleware } from '../middleware/generalMiddleware';
+import { getRegistry } from './getRouteRegistry';
 import { postRegistry } from './postRouteRegistry';
 
 declare module 'express-session' {
@@ -20,10 +17,12 @@ export class Router {
     setupMiddleware(this.server, this.dir);
 
     getRegistry.getPaths().forEach((route) => {
+      console.log('Registering GET route:', route);
       this.server.get(route, getRegistry.getHandler(route));
     });
 
     postRegistry.getPaths().forEach((route) => {
+      console.log('Registering POST route:', route);
       this.server.post(route, postRegistry.getHandler(route));
     });
   }

@@ -1,6 +1,6 @@
 import { PageController } from '../controller/PageController';
-import { getRegistry } from './getRouteRegistry';
 import { DbController } from '../controller/DbController';
+import { getRegistry } from './getRouteRegistry';
 import '../model/repositoriesMapper';
 
 getRegistry.register('/', PageController.getMainPage());
