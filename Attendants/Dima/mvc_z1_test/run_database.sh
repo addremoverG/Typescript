@@ -1,1 +1,0 @@
-docker compose --env-file .env -f postgres-compose.yml up -d

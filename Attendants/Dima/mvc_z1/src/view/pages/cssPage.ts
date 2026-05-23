@@ -9,6 +9,7 @@ export class CssPageView extends View {
         <label for="navColor">Choose bar color:</label>
         <input type="color" id="navColor" name="color" />
         <button type="submit">Apply</button>
+        <button type="submit" formaction="/reset-color">Reset color</button>
       </form>
     </div>
   `;
