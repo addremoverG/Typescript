@@ -23,7 +23,12 @@ export class Router {
 
     postRegistry.getPaths().forEach((route) => {
       console.log('Registering POST route:', route);
-      this.server.post(route, postRegistry.getHandler(route));
+      const handler = postRegistry.getHandler(route);
+      if (Array.isArray(handler)) {
+        this.server.post(route, ...handler);
+        return;
+      }
+      this.server.post(route, handler);
     });
   }
 }

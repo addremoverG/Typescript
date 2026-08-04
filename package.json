@@ -22,8 +22,10 @@
   },
   "dependencies": {
     "@types/express": "^5.0.6",
+    "@types/multer": "^2.2.0",
     "express": "^5.2.1",
     "express-session": "^1.19.0",
+    "multer": "^2.2.0",
     "pg-promise": "^12.6.2"
   },
   "description": ""

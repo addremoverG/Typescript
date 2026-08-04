@@ -8,6 +8,7 @@ export function setupMiddleware(server: Express, dir: string): void {
     express.urlencoded({ extended: true }),
     express.static(`${dir}/public/styles`),
     express.static(`${dir}/public/images`),
+    express.static(`${dir}/public`),
     session({
       secret: process.env.SESSION_SECRET || 'secret',
       resave: false,

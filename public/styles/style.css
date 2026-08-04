@@ -70,6 +70,13 @@ body {
     flex-grow: 4;
 }
 
+.content{
+    min-height: 200px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
 .footer {
     width: 100%;
@@ -88,4 +95,72 @@ a:visited {
     color: rgb(0, 60, 255);
     /* тот же цвет, что и у обычных ссылок */
 
+}
+
+.photo_gallery_page{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+}
+
+.photo_gallery_menu{
+    width: 20%;
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+
+}
+
+.photo_gallery_menu h3{
+        text-align: center;
+}
+
+
+.photo_gallery_content{
+    width: 80%;
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+    text-align: center;
+}
+
+.photo_gallery_images{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    /* border: 1px solid black; */
+    /* padding: 10px; */
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    
+}
+.photo_gallery_images img{
+    width: 100%;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+.photo_gallery_image_meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 6px;
+}
+
+.photo_gallery_delete_form button {
+    background: transparent;
+    border: none;
+    color: red;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+
+.photo_gallery_delete_form button:hover {
+    color: darkred;
 }

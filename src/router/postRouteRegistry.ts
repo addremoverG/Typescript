@@ -1,14 +1,15 @@
-import { Request, Response } from 'express';
+import { RequestHandler } from 'express';
 
-type Handler = (req: Request, res: Response) => void | Promise<void>;
+type Handler = RequestHandler;
+type RouteHandler = Handler | Handler[];
 
 class PostRouteRegistry {
-  private routes = new Map<string, Handler>();
+  private routes = new Map<string, RouteHandler>();
 
-  register(path: string, handler: Handler): void {
+  register(path: string, handler: RouteHandler): void {
     this.routes.set(path, handler);
   }
-  getHandler(path: string): Handler {
+  getHandler(path: string): RouteHandler {
     const handler = this.routes.get(path);
     if (!handler) {
       throw new Error(`No handler for ${path}`);

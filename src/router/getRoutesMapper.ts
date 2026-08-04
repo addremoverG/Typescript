@@ -13,7 +13,7 @@ getRegistry.register(
 getRegistry.register('/management', PageController.getManagementPage());
 getRegistry.register('/about', PageController.getAboutPage());
 getRegistry.register('/products', PageController.getProductsPage());
-getRegistry.register('/certificate', PageController.getCertificatePage());
+getRegistry.register('/photo_gallery', PageController.getPhotoGalleryPage());
 getRegistry.register(
   '/company_presentation',
   PageController.getCompanyPresentationPage(),
@@ -30,4 +30,24 @@ getRegistry.register(
 getRegistry.register(
   '/dbdata/products/:id',
   DbController.getProductsData('products', 'getProductById'),
+);
+
+getRegistry.register(
+  '/dbdata/photo_gallery/all',
+  DbController.getPhotoGalleryData('photo_gallery', 'getAllImages'),
+);
+
+getRegistry.register(
+  '/dbdata/photo_gallery/:category/all',
+  DbController.getPhotoGalleryData('photo_gallery', 'getImagesByCategory'),
+);
+
+getRegistry.register(
+  '/api/photo_gallery/:category',
+  DbController.getPhotoGalleryJsonData('photo_gallery', 'getImagesByCategory'),
+);
+
+getRegistry.register(
+  '/dbdata/photo_gallery/:category/:id',
+  DbController.getPhotoGalleryData('photo_gallery', 'getImageById'),
 );

@@ -1,3 +1,4 @@
+import path from 'path';
 import { View } from '../abstractView';
 
 export class ProductsPageView extends View {
@@ -10,15 +11,16 @@ export class ProductsPageView extends View {
       price: number;
     }[] = locals?.products ?? [];
     const rows = products
-      .map(
-        (product) => `
+      .map((product) => {
+        const imageSrc = '/' + product.image_url.replace(/^\/+/, '');
+        return `
     <tr>
       <td><a href="/dbdata/products/${product.id}">${product.id}</a></td>
       <td>${product.name}</td>
-      <td>${product.image_url}</td>
+      <td><img src="${encodeURI(imageSrc)}" alt="${product.name}" width="100" /></td>
       <td>${product.price}</td>
-    </tr>`,
-      )
+    </tr>`;
+      })
       .join('');
 
     return `
@@ -28,7 +30,7 @@ export class ProductsPageView extends View {
       <tr>
         <th>Id</th>  
         <th>Name</th>
-        <th>Image URL</th>
+        <th>Image</th>
         <th>Price</th>
       </tr>
       ${rows}
