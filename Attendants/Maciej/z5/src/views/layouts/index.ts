@@ -1,0 +1,13 @@
+export * from './mainPage';
+export * from './offerPage';
+export * from './historyPage';
+export * from './boardPage';
+export * from './presentationPage';
+export * from './certificatePage';
+export * from './mediaPage';
+export * from './mapPage';
+export * from './contactPage';
+export * from './appearancePage';
+export * from './loginPage';
+export { bazaContent } from './baza';
+export { galeriaContent } from './galeria';
