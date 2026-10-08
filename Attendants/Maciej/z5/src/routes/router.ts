@@ -1,0 +1,27 @@
+import { Express } from 'express';
+import { PageController } from '../controllers/PageController';
+import { upload } from '../middleware/upload.middleware';
+
+export class AppRouter {
+  public static init(server: Express): void {
+    server.get('/', (req, res) => res.redirect('/z1'));
+    server.get('/z1', PageController.mainPage());
+    server.get('/z1/oferta', PageController.offerPage());
+    server.get('/z1/historia', PageController.companyHistory());
+    server.get('/z1/zarzad', PageController.boardPage());
+    server.get('/z1/prezentacja', PageController.presentationPage());
+    server.get('/z1/certyfikat', PageController.certificatePage());
+    server.get('/z1/pisza-o-nas', PageController.mediaPage());
+    server.get('/z1/mapa', PageController.mapPage());
+    server.get('/z1/kontakt', PageController.contactPage());
+    server.get('/z1/wyglad', PageController.appearancePage());
+    server.get('/z1/baza', PageController.bazaPage());
+    server.post('/z1/zmien-tlo', PageController.changeBgColor());
+    server.get('/z1/login', PageController.loginPage());
+    server.post('/z1/login', PageController.handleLogin());
+    server.get('/z1/logout', PageController.handleLogout());
+    server.get('/z1/galeria', PageController.galleryPage());
+    server.post('/z1/galeria/dodaj-zdjecie', upload.single('zdjecie'), PageController.handleAddPhoto());
+    server.post('/z1/galeria/usun-zdjecie', PageController.handleDeletePhoto());
+  }
+}
