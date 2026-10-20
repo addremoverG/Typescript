@@ -91,7 +91,7 @@ export const galeriaContent = (
               .map(
                 (row) => `
             <div class="photo-item">
-                <img src="/images/${row.link}" alt="${row.komentarz}">
+                <img src="${row.link.startsWith('http') ? row.link : '/images/' + row.link}" alt="${row.komentarz}">
                 <p>${row.komentarz}</p>
                 <form action="/z1/galeria/usun-zdjecie" method="POST" style="margin-top:6px;">
                   <input type="hidden" name="idt" value="${row.idt}">
