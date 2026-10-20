@@ -1,6 +1,7 @@
 import { Request, Response } from 'express';
 import { SiteBuilder } from '../views/pages/SiteBuilder';
 import { PG } from '../models/Pg';
+import { R2 } from '../models/R2';
 
 export class PageController {
   static mainPage() {
@@ -115,7 +116,8 @@ export class PageController {
     return async (req: Request, res: Response) => {
       const { galeria, komentarz } = req.body;
       if (req.file && galeria) {
-        await PG.getInstance().dodajZdjecie(req.file.filename, galeria, komentarz);
+        const link = await R2.getInstance().wyslijZdjecie(req.file);
+        await PG.getInstance().dodajZdjecie(link, galeria, komentarz);
       }
       res.redirect(`/z1/galeria?galeria=${galeria}`);
     };
