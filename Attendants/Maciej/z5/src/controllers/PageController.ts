@@ -125,6 +125,10 @@ export class PageController {
   static handleDeletePhoto() {
     return async (req: Request, res: Response) => {
       const { idt, galeria } = req.body;
+      const zdjecie = await PG.getInstance().queryZdjecie(idt);
+      if (zdjecie && zdjecie.link.startsWith('http')) {
+        await R2.getInstance().usunZdjecie(zdjecie.link);
+      }
       await PG.getInstance().usunZdjecie(idt);
       res.redirect(`/z1/galeria?galeria=${galeria}`);
     };

@@ -63,4 +63,8 @@ export class PG {
   async usunZdjecie(idt: number) {
     return await this.client.none('DELETE FROM zdjecia WHERE idt = $1', [idt]);
   }
+
+  async queryZdjecie(idt: number) {
+    return await this.client.oneOrNone('SELECT * FROM zdjecia WHERE idt = $1', [idt]);
+  }
 }

@@ -1,4 +1,8 @@
-import { S3Client, PutObjectCommand } from '@aws-sdk/client-s3';
+import {
+  S3Client,
+  PutObjectCommand,
+  DeleteObjectCommand,
+} from '@aws-sdk/client-s3';
 
 export class R2 {
   private static instance: R2;
@@ -33,5 +37,15 @@ export class R2 {
       }),
     );
     return `${process.env.R2_PUBLIC_URL}/${nazwa}`;
+  }
+
+  async usunZdjecie(link: string) {
+    const nazwa = link.replace(`${process.env.R2_PUBLIC_URL}/`, '');
+    await this.client.send(
+      new DeleteObjectCommand({
+        Bucket: process.env.R2_BUCKET as string,
+        Key: nazwa,
+      }),
+    );
   }
 }
